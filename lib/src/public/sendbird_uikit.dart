@@ -15,7 +15,7 @@ import 'package:sendbird_uikit/src/internal/utils/sbu_preferences.dart';
 /// SendbirdUIKit
 class SendbirdUIKit {
   /// UIKit version
-  static const version = '1.0.0-beta.1';
+  static const version = '1.0.0-beta.2';
 
   SendbirdUIKit._();
 
