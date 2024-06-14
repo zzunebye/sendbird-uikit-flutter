@@ -1,3 +1,8 @@
+## v1.0.0-beta.2 (Jun 14, 2024)
+
+### Improvements
+- Updated `README.md`
+
 ## v1.0.0-beta.1 (Jun 14, 2024)
 
 ### Features

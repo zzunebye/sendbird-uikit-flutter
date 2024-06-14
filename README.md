@@ -38,14 +38,14 @@ Add following dependencies and fonts for `SendbirdIcons` in `pubspec.yaml`.
 
 ```yaml
 dependencies:
-  sendbird_uikit: ^1.0.0-beta.1
+  sendbird_uikit: ^1.0.0-beta.2
   sendbird_chat_sdk: ^4.2.16
 
 flutter:
   fonts:
     - family: SendbirdIcons
       fonts:
-        - asset: packages/sendbird-uikit/fonts/SendbirdIcons.ttf
+        - asset: packages/sendbird_uikit/fonts/SendbirdIcons.ttf
 ```
 
 Run `flutter pub get` command in your project directory.
