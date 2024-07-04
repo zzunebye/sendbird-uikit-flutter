@@ -14,8 +14,8 @@ import 'package:sendbird_uikit/src/internal/component/basic/sbu_placeholder_comp
 import 'package:sendbird_uikit/src/internal/component/basic/sbu_scroll_bar_component.dart';
 import 'package:sendbird_uikit/src/internal/component/basic/sbu_text_component.dart';
 import 'package:sendbird_uikit/src/internal/component/module/sbu_header_component.dart';
+import 'package:sendbird_uikit/src/internal/component/module/sbu_message_input_component.dart';
 import 'package:sendbird_uikit/src/internal/component/module/sbu_message_list_item_component.dart';
-import 'package:sendbird_uikit/src/internal/component/module/sbu_message_sender_component.dart';
 import 'package:sendbird_uikit/src/internal/provider/sbu_message_collection_provider.dart';
 import 'package:sendbird_uikit/src/internal/resource/sbu_text_styles.dart';
 
@@ -55,7 +55,7 @@ class SBUGroupChannelScreen extends SBUStatefulComponent {
     SBUTheme theme,
     SBUStrings strings,
     MessageCollection collection,
-  )? customMessageSender;
+  )? customMessageInput;
 
   final Widget Function(
     BuildContext context,
@@ -97,7 +97,7 @@ class SBUGroupChannelScreen extends SBUStatefulComponent {
     this.cacheExtent = defaultCacheExtent,
     this.customHeader,
     this.customListItem,
-    this.customMessageSender,
+    this.customMessageInput,
     this.customLoadingBody,
     this.customEmptyBody,
     this.customErrorScreen,
@@ -407,8 +407,8 @@ class SBUGroupChannelScreenState extends State<SBUGroupChannelScreen>
                       ))
                 : list ?? widget.getDefaultContainer(isLightTheme));
 
-    final messageSender = collection != null
-        ? SBUMessageSenderComponent(
+    final messageInput = collection != null
+        ? SBUMessageInputComponent(
             messageCollectionNo: collectionNo!,
             backgroundColor:
                 isLightTheme ? SBUColors.background50 : SBUColors.background600,
@@ -445,14 +445,14 @@ class SBUGroupChannelScreenState extends State<SBUGroupChannelScreen>
           ),
           collection == null
               ? widget.getDefaultContainer(isLightTheme)
-              : widget.customMessageSender != null
-                  ? widget.customMessageSender!(
+              : widget.customMessageInput != null
+                  ? widget.customMessageInput!(
                       context,
                       theme,
                       strings,
                       collection,
                     )
-                  : messageSender ?? widget.getDefaultContainer(isLightTheme),
+                  : messageInput ?? widget.getDefaultContainer(isLightTheme),
         ],
       ),
       if (collection?.channel.isFrozen ?? false)
