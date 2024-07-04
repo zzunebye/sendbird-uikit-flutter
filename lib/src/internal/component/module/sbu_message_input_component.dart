@@ -16,21 +16,21 @@ import 'package:sendbird_uikit/src/internal/component/basic/sbu_text_component.d
 import 'package:sendbird_uikit/src/internal/provider/sbu_message_collection_provider.dart';
 import 'package:sendbird_uikit/src/internal/resource/sbu_text_styles.dart';
 
-class SBUMessageSenderComponent extends SBUStatefulComponent {
+class SBUMessageInputComponent extends SBUStatefulComponent {
   final int messageCollectionNo;
   final Color backgroundColor;
 
-  const SBUMessageSenderComponent({
+  const SBUMessageInputComponent({
     required this.messageCollectionNo,
     required this.backgroundColor,
     super.key,
   });
 
   @override
-  State<StatefulWidget> createState() => SBUMessageSenderComponentState();
+  State<StatefulWidget> createState() => SBUMessageInputComponentState();
 }
 
-class SBUMessageSenderComponentState extends State<SBUMessageSenderComponent> {
+class SBUMessageInputComponentState extends State<SBUMessageInputComponent> {
   final textEditingController = TextEditingController();
   final textFieldFocusNode = FocusNode();
 
