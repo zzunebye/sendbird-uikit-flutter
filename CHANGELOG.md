@@ -1,3 +1,8 @@
+## v1.0.0-beta.4 (Jul 11, 2024)
+
+### Improvements
+- Updated `README.md` and the documentation link
+
 ## v1.0.0-beta.3 (Jul 4, 2024)
 
 ### Improvements
