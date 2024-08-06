@@ -24,3 +24,11 @@ export 'src/public/screen/group_channel/channel_list/sbu_group_channel_settings_
 
 // Main
 export 'src/public/sendbird_uikit.dart';
+
+// Internal Components (Use with caution)
+export 'src/internal/component/module/sbu_header_component.dart';
+export 'src/internal/component/module/sbu_message_input_component.dart';
+export 'src/internal/component/module/sbu_message_list_item_component.dart';
+export 'src/internal/component/module/sbu_user_list_item_component.dart';
+export 'src/internal/component/module/sbu_channel_list_item_component.dart';
+export 'src/internal/component/module/sbu_group_channel_list_item_component.dart';
